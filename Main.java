@@ -9,7 +9,6 @@ public class Main {
 		int exit = 1;
 		
 		do {
-			Scanner sc = new Scanner(System.in);
 			
 			System.out.println("BINVENIDOS AMAZON VIEWER");
 			System.err.println("");
@@ -20,30 +19,29 @@ public class Main {
 			System.out.println("4. Magazines");
 			System.out.println("0. Exit");
 			
-			int seleccionDeContenido = sc.nextInt();
-			
-			
-		seleccion:
-			switch (seleccionDeContenido) {
-			case 1:
-				System.out.println("Visto Movies!");
-				break seleccion;
-			case 2:
-				System.out.println("Visto Series!");
-				break seleccion;
-			case 3:
-				System.out.println("Visto Books!");
-				break seleccion;
-			case 4:
-				System.out.println("Visto Magazine!");
-				break seleccion;
+			//reads response from user
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+			switch (response) {
 			case 0:
 				System.out.println("Saliendo del Sistema");
 				exit = 0;
-				break seleccion;
+				break;
+			case 1:
+				System.out.println("Visto Movies!");
+				break;
+			case 2:
+				System.out.println("Visto Series!");
+				break;
+			case 3:
+				System.out.println("Visto Books!");
+				break;
+			case 4:
+				System.out.println("Visto Magazine!");
+				break;
 			default:
 				System.out.println("Seleccion no valida.");
-				break seleccion;
+				break;
 			}
 			
 		}while(exit != 0);

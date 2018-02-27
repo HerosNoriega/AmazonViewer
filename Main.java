@@ -45,7 +45,6 @@ public class Main {
 				System.out.println("Seleccion no valida.");
 				break seleccion;
 			}
-			sc.close();
 			
 		}while(exit != 0);
 		

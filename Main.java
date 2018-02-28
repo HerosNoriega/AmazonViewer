@@ -2,11 +2,20 @@ package com.herosnoriega.amazonviewer;
 
 import java.util.Scanner;
 
+import com.herosnoriega.amazonviewer.model.Movie;
+
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int exit = 1;
+		
+		showMenu();
+				
+	}
+	
+	public static void showMenu() {
+		
+		int exit = 0;
 		
 		do {
 			
@@ -25,7 +34,7 @@ public class Main {
 			switch (response) {
 			case 0:
 				System.out.println("Saliendo del Sistema");
-				exit = 0;
+				exit = 1;
 				break;
 			case 1:
 				System.out.println("Visto Movies!");
@@ -45,6 +54,7 @@ public class Main {
 			}
 			
 		}while(exit != 0);
-		
+
 	}
+
 }
